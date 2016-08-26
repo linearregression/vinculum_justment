@@ -6,41 +6,6 @@ import (
 
 func init() {
 
-	beego.GlobalControllerRouter["justment/controllers:ObjectController"] = append(beego.GlobalControllerRouter["justment/controllers:ObjectController"],
-		beego.ControllerComments{
-			Method: "Post",
-			Router: `/`,
-			AllowHTTPMethods: []string{"post"},
-			Params: nil})
-
-	beego.GlobalControllerRouter["justment/controllers:ObjectController"] = append(beego.GlobalControllerRouter["justment/controllers:ObjectController"],
-		beego.ControllerComments{
-			Method: "Get",
-			Router: `/:objectId`,
-			AllowHTTPMethods: []string{"get"},
-			Params: nil})
-
-	beego.GlobalControllerRouter["justment/controllers:ObjectController"] = append(beego.GlobalControllerRouter["justment/controllers:ObjectController"],
-		beego.ControllerComments{
-			Method: "GetAll",
-			Router: `/`,
-			AllowHTTPMethods: []string{"get"},
-			Params: nil})
-
-	beego.GlobalControllerRouter["justment/controllers:ObjectController"] = append(beego.GlobalControllerRouter["justment/controllers:ObjectController"],
-		beego.ControllerComments{
-			Method: "Put",
-			Router: `/:objectId`,
-			AllowHTTPMethods: []string{"put"},
-			Params: nil})
-
-	beego.GlobalControllerRouter["justment/controllers:ObjectController"] = append(beego.GlobalControllerRouter["justment/controllers:ObjectController"],
-		beego.ControllerComments{
-			Method: "Delete",
-			Router: `/:objectId`,
-			AllowHTTPMethods: []string{"delete"},
-			Params: nil})
-
 	beego.GlobalControllerRouter["justment/controllers:UserController"] = append(beego.GlobalControllerRouter["justment/controllers:UserController"],
 		beego.ControllerComments{
 			Method: "Post",
@@ -87,6 +52,13 @@ func init() {
 		beego.ControllerComments{
 			Method: "Logout",
 			Router: `/logout`,
+			AllowHTTPMethods: []string{"get"},
+			Params: nil})
+
+	beego.GlobalControllerRouter["justment/controllers:VinculumController"] = append(beego.GlobalControllerRouter["justment/controllers:VinculumController"],
+		beego.ControllerComments{
+			Method: "Get",
+			Router: `/:vinculumId`,
 			AllowHTTPMethods: []string{"get"},
 			Params: nil})
 
